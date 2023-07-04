@@ -7,7 +7,7 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -59,7 +59,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const pages = ['База кандидатов', 'Мои вакансии', 'Отчеты', 'Шаблоны'];
 const settings = ['Profile', 'Admin', 'Logout'];
 
 export default function ResponsiveAppBar() {
@@ -82,10 +81,9 @@ export default function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" color='secondary'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -105,16 +103,6 @@ export default function ResponsiveAppBar() {
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -162,8 +150,8 @@ export default function ResponsiveAppBar() {
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
-              <Link style={{ textDecoration: 'none', color: 'white' }} href="/">
-                <Typography variant="inherit" textAlign="center">База кандидатов</Typography>
+              <Link style={{ textDecoration: 'none', color: 'lightgrey' }} href="/">
+                <Typography variant="inherit" textAlign="center"><b>База кандидатов</b></Typography>
               </Link>
             </Button>
 
@@ -171,26 +159,26 @@ export default function ResponsiveAppBar() {
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
-              <Link style={{ textDecoration: 'none', color: 'white' }} href="/MyVacancies">
-                <Typography variant="inherit" textAlign="center">Мои вакансии</Typography>
+              <Link style={{ textDecoration: 'none', color: 'lightgrey' }} href="/MyVacancies">
+                <Typography variant="inherit" textAlign="center"><b>Мои вакансии</b></Typography>
               </Link>
             </Button>
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block' }}
+              sx={{ my: 2, color: 'white', display: '#E5E4E2' }}
             >
-              <Link style={{ textDecoration: 'none', color: 'white' }} href="/Reports">
-                <Typography variant="inherit" textAlign="center">Отчеты</Typography>
+              <Link style={{ textDecoration: 'none', color: 'lightgrey' }} href="/Reports">
+                <Typography variant="inherit" textAlign="center"><b>Отчеты</b></Typography>
               </Link>
             </Button>
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block' }}
+              sx={{ my: 2, color: 'white', display: 'lightgray' }}
             >
-              <Link style={{ textDecoration: 'none', color: 'white' }} href="/MyTemplates">
-                <Typography variant="inherit" textAlign="center">Мои шаблоны</Typography>
+              <Link style={{ textDecoration: 'none', color: 'lightgrey' }} href="/MyTemplates">
+                <Typography variant="inherit" textAlign="center"><b>Мои шаблоны</b></Typography>
               </Link>
             </Button>
 
