@@ -6,9 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "autofix": "pnpm eslint --fix \"./**/*.{js,jsx,ts,tsx*}\""
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.13.7",
+    "@mui/joy": "5.0.0-alpha.86",
+    "@mui/material": "^5.13.7",
+    "@mui/x-data-grid": "^6.9.1",
+    "@nanostores/react": "^0.7.1",
     "@types/node": "20.3.3",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
