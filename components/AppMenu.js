@@ -57,7 +57,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const drawerWidth = 140;
+const drawerWidth = 110;
 
 export default function ClippedDrawer() {
   return (
@@ -98,7 +98,7 @@ export default function ClippedDrawer() {
           <ListItem sx={{ my: 2, color: 'white', display: 'block' }} disablePadding>
             <ListItemButton>
               <Link style={{ textDecoration: 'none', color: 'grey' }} href="/">
-                <Typography variant="inherit" textAlign="center"><b>База</b></Typography>
+                <Typography variant="body2" textAlign="center"><b>База</b></Typography>
               </Link>
             </ListItemButton>
           </ListItem>
@@ -106,7 +106,7 @@ export default function ClippedDrawer() {
           <ListItem sx={{ my: 2, color: 'white', display: 'block' }} disablePadding>
             <ListItemButton>
               <Link style={{ textDecoration: 'none', color: 'grey' }} href="/Vacancies">
-                <Typography variant="inherit" textAlign="center"><b>Вакансии</b></Typography>
+                <Typography variant="body2" textAlign="center"><b>Вакансии</b></Typography>
               </Link>
             </ListItemButton>
           </ListItem>
@@ -114,7 +114,7 @@ export default function ClippedDrawer() {
           <ListItem sx={{ my: 2, color: 'white', display: 'block' }} disablePadding>
             <ListItemButton>
               <Link style={{ textDecoration: 'none', color: 'grey' }} href="/Reports">
-                <Typography variant="inherit" textAlign="center"><b>Отчеты</b></Typography>
+                <Typography variant="body2" textAlign="center"><b>Отчеты</b></Typography>
               </Link>
             </ListItemButton>
           </ListItem>
@@ -122,7 +122,7 @@ export default function ClippedDrawer() {
           <ListItem sx={{ my: 2, color: 'white', display: 'block' }} disablePadding>
             <ListItemButton>
               <Link style={{ textDecoration: 'none', color: 'grey' }} href="/Templates">
-                <Typography variant="inherit" textAlign="center"><b>Шаблоны</b></Typography>
+                <Typography variant="body2" textAlign="center"><b>Шаблоны</b></Typography>
               </Link>
             </ListItemButton>
           </ListItem>
@@ -132,7 +132,7 @@ export default function ClippedDrawer() {
             <ListItem sx={{ my: 2, color: 'white', display: 'block' }} disablePadding>
               <ListItemButton>
                 <Link style={{ textDecoration: 'none', color: 'lightgrey' }} href="/Admin">
-                  <Typography variant="inherit" textAlign="center">Админ</Typography>
+                  <Typography variant="body2" textAlign="center">Админ</Typography>
                 </Link>
               </ListItemButton>
             </ListItem>
@@ -140,7 +140,7 @@ export default function ClippedDrawer() {
             <ListItem sx={{ my: 2, color: 'white', display: 'block' }} disablePadding>
               <ListItemButton>
                 <Link style={{ textDecoration: 'none', color: 'lightgrey' }} href="/SignOut">
-                  <Typography variant="inherit" textAlign="center">Выход</Typography>
+                  <Typography variant="body2" textAlign="center">Выход</Typography>
                 </Link>
               </ListItemButton>
             </ListItem>

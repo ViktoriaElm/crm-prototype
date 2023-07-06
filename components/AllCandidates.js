@@ -57,12 +57,12 @@ export default function AllCandidates() {
   return (
     <TableContainer component={Paper}>
 
-      <Table sx={{ maxWidth: 1784 }} aria-label="customized table">
+      <Table sx={{ maxWidth: 1917 }} aria-label="customized table">
 
         <TableHead >
           <TableRow>
 
-            <StyledTableCell sx={{ width: 139, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
+            <StyledTableCell sx={{ width: 100, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
 
             <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} align="left"><b>30 кандидатов</b></StyledTableCell>
 
@@ -86,7 +86,7 @@ export default function AllCandidates() {
 
             <StyledTableRow key={row.name}>
 
-              <StyledTableCell sx={{ width: 139, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
+              <StyledTableCell sx={{ width: 100, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
 
               <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} component="th" scope="row">{row.nameCandidate}</StyledTableCell>
 
