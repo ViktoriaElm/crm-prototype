@@ -52,16 +52,16 @@ export default function Templates() {
     return (
         <TableContainer component={Paper}>
 
-            <Table sx={{ maxWidth: 1784 }} aria-label="customized table">
+            <Table sx={{ maxWidth: 1917 }} aria-label="customized table">
 
                 <TableHead >
-                    <TableRow>
+                    <TableRow sx={{ ml:3 }}>
 
-                        <StyledTableCell sx={{ width: 139, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
+                        <StyledTableCell sx={{ width: 100, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
 
                         <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} align="left"><b>Вакансия</b></StyledTableCell>
 
-                        <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} align="left"><b>Текст превью</b></StyledTableCell>
+                        {/* <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} align="left"><b>Текст превью</b></StyledTableCell> */}
 
                         <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} align="left"><b>Действия</b></StyledTableCell>
 
@@ -72,17 +72,20 @@ export default function Templates() {
                 <TableBody>
                     {rows.map((row) => (
 
+                        // строку сделать уже
+
                         <StyledTableRow key={row.name}>
 
-                            <StyledTableCell sx={{ width: 139, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
+                            <StyledTableCell sx={{ width: 100, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
 
                             <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} component="th" scope="row">{row.nameVacancy}</StyledTableCell>
 
-                            <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">{row.previewTemplate}</StyledTableCell>
+                            {/* <StyledTableCell sx={{ maxWidth: 900, border: 1, borderColor: 'grey.200' }} align="left">{row.previewTemplate}</StyledTableCell> */}
 
-                            <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">
-                                <Button sx={{ width: 150, color: 'silver', border: 1, mt: 1 }} variant="outlined">Редактировать</Button>
-                                <Button sx={{ width: 150, color: 'silver', border: 1, mt: 1 }} variant="outlined">Копировать</Button>
+                            <StyledTableCell sx={{ maxWidth:132,  border: 1, borderColor: 'grey.200' }} align="center">
+                                {/* текст кнопки сделать меньше */}
+                                <Button sx={{ width: 130, color: 'silver', border: 1, m: 1 }} variant="outlined">Изменить</Button>
+                                <Button sx={{ width: 130, color: 'silver', border: 1, m: 1 }} variant="outlined">Копировать</Button>
                             </StyledTableCell>
 
                         </StyledTableRow>

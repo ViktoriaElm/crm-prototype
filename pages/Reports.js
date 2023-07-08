@@ -1,6 +1,6 @@
 export default function Reports() {
     return(<>
-    <h1>Отчеты</h1>
+    <h1>______ Отчеты</h1>
     </>)
 }
 

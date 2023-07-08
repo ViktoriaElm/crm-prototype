@@ -96,53 +96,53 @@ export default function ClippedDrawer() {
         <Box sx={{ overflow: 'auto' }}>
 
           <ListItem sx={{ my: 2, color: 'white', display: 'block' }} disablePadding>
-            <ListItemButton>
-              <Link style={{ textDecoration: 'none', color: 'grey' }} href="/">
+            <Link style={{ textDecoration: 'none', color: 'grey' }} href="/">
+              <ListItemButton>
                 <Typography variant="body2" textAlign="center"><b>База</b></Typography>
-              </Link>
-            </ListItemButton>
+              </ListItemButton>
+            </Link>
           </ListItem>
 
           <ListItem sx={{ my: 2, color: 'white', display: 'block' }} disablePadding>
-            <ListItemButton>
-              <Link style={{ textDecoration: 'none', color: 'grey' }} href="/Vacancies">
+            <Link style={{ textDecoration: 'none', color: 'grey' }} href="/Vacancies">
+              <ListItemButton>
                 <Typography variant="body2" textAlign="center"><b>Вакансии</b></Typography>
-              </Link>
-            </ListItemButton>
+              </ListItemButton>
+            </Link>
           </ListItem>
 
           <ListItem sx={{ my: 2, color: 'white', display: 'block' }} disablePadding>
-            <ListItemButton>
-              <Link style={{ textDecoration: 'none', color: 'grey' }} href="/Reports">
+            <Link style={{ textDecoration: 'none', color: 'grey' }} href="/Reports">
+              <ListItemButton>
                 <Typography variant="body2" textAlign="center"><b>Отчеты</b></Typography>
-              </Link>
-            </ListItemButton>
+              </ListItemButton>
+            </Link>
           </ListItem>
 
           <ListItem sx={{ my: 2, color: 'white', display: 'block' }} disablePadding>
-            <ListItemButton>
-              <Link style={{ textDecoration: 'none', color: 'grey' }} href="/Templates">
+            <Link style={{ textDecoration: 'none', color: 'grey' }} href="/Templates">
+              <ListItemButton>
                 <Typography variant="body2" textAlign="center"><b>Шаблоны</b></Typography>
-              </Link>
-            </ListItemButton>
+              </ListItemButton>
+            </Link>
           </ListItem>
 
           <Divider />
           <List>
             <ListItem sx={{ my: 2, color: 'white', display: 'block' }} disablePadding>
-              <ListItemButton>
-                <Link style={{ textDecoration: 'none', color: 'lightgrey' }} href="/Admin">
+              <Link style={{ textDecoration: 'none', color: 'lightgrey' }} href="/Admin">
+                <ListItemButton>
                   <Typography variant="body2" textAlign="center">Админ</Typography>
-                </Link>
-              </ListItemButton>
+                </ListItemButton>
+              </Link>
             </ListItem>
 
             <ListItem sx={{ my: 2, color: 'white', display: 'block' }} disablePadding>
-              <ListItemButton>
-                <Link style={{ textDecoration: 'none', color: 'lightgrey' }} href="/SignOut">
+              <Link style={{ textDecoration: 'none', color: 'lightgrey' }} href="/SignOut">
+                <ListItemButton>
                   <Typography variant="body2" textAlign="center">Выход</Typography>
-                </Link>
-              </ListItemButton>
+                </ListItemButton>
+              </Link>
             </ListItem>
           </List>
         </Box>
