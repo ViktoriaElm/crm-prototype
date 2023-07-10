@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import Link from 'next/link';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -62,7 +63,7 @@ export default function AllCandidates() {
         <TableHead >
           <TableRow>
 
-            <StyledTableCell sx={{ width: 100, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
+            <StyledTableCell sx={{ width: 119, border: 1, borderColor: 'grey.100' }} align="left"><b></b></StyledTableCell>
 
             <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} align="left"><b>30 кандидатов</b></StyledTableCell>
 
@@ -82,36 +83,63 @@ export default function AllCandidates() {
         </TableHead>
 
         <TableBody>
+
           {rows.map((row) => (
 
             <StyledTableRow key={row.name}>
 
-              <StyledTableCell sx={{ width: 100, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
+              <StyledTableCell sx={{ width: 119, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
 
-              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} component="th" scope="row">{row.nameCandidate}</StyledTableCell>
-
-              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">{row.position}</StyledTableCell>
-
-              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">{row.city}</StyledTableCell>
-
-              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">{row.phone}</StyledTableCell>
-
-              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">{row.email}</StyledTableCell>
-
-              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">
-                <Typography variant="inherit" color='darkgray'>
-                  {row.status}
-                </Typography>
+              <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} component="th" scope="row">
+                <Link style={{ textDecoration: 'none', color: 'black' }} href="/Candidate">
+                  {row.nameCandidate}
+                </Link>
               </StyledTableCell>
 
-              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">
-                <Typography variant="inherit" color='darkgray'>
-                  {row.comments}
-                </Typography>
+              <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} align="left">
+                <Link style={{ textDecoration: 'none', color: 'black' }} href="/Candidate">
+                  {row.position}
+                </Link>
+              </StyledTableCell>
+
+              <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} align="left">
+                <Link style={{ textDecoration: 'none', color: 'black' }} href="/Candidate">
+                  {row.city}
+                </Link>
+              </StyledTableCell>
+
+              <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} align="left">
+                <Link style={{ textDecoration: 'none', color: 'black' }} href="/Candidate">
+                  {row.phone}
+                </Link>
+              </StyledTableCell>
+
+              <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} align="left">
+                <Link style={{ textDecoration: 'none', color: 'black' }} href="/Candidate">
+                  {row.email}
+                </Link>
+              </StyledTableCell>
+
+              <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} align="left">
+                <Link style={{ textDecoration: 'none' }} href="/Candidate">
+                  <Typography variant="inherit" color='darkgray'>
+                    {row.status}
+                  </Typography>
+                </Link>
+              </StyledTableCell>
+
+              <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} align="left">
+                <Link style={{ textDecoration: 'none' }} href="/Candidate">
+                  <Typography variant="inherit" color='darkgray'>
+                    {row.comments}
+                  </Typography>
+                </Link>
               </StyledTableCell>
 
             </StyledTableRow>
+
           ))}
+
         </TableBody>
 
       </Table>

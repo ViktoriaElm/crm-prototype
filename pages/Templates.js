@@ -57,7 +57,7 @@ export default function Templates() {
                 <TableHead >
                     <TableRow sx={{ ml:3, }}>
 
-                        <StyledTableCell sx={{ width: 100,  borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
+                        <StyledTableCell sx={{ width: 110,  borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
 
                         <StyledTableCell sx={{ borderColor: 'grey.300' }} align="left"><b>Шаблоны писем</b></StyledTableCell>
 

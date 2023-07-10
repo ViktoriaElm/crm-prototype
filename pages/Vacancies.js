@@ -45,7 +45,7 @@ export default function Vacancies() {
         <TableHead >
           <TableRow>
 
-            <StyledTableCell sx={{ width: 100, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
+            <StyledTableCell sx={{ width: 110, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
 
             <StyledTableCell sx={{ border: 1, borderColor: 'grey.300' }} align="left"><b>Вакансия</b></StyledTableCell>
 
@@ -70,7 +70,7 @@ export default function Vacancies() {
 
             <StyledTableRow key={row.name}>
 
-              <StyledTableCell sx={{ width: 100, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
+              <StyledTableCell sx={{ width: 110, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
 
               <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} component="th" scope="row">{row.nameVacancy}</StyledTableCell>
 
