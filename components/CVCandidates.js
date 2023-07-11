@@ -1,9 +1,5 @@
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
-import { DateField } from '@mui/x-date-pickers/DateField';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs from 'dayjs';
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';
@@ -51,14 +47,14 @@ const tags = [
   { label: 'fintech' },
 ];
 
-export default function VacancyCandidates() {
+export default function CVCandidates() {
 
   const [value, setValue] = useState(dayjs('2022-04-17'));
 
   return (
-    <Box sx={{ ml:-10, mt: -5 }}>
+    <Box sx={{ ml: -10, mt: -5 }}>
 
-      <Box sx={{ maxWidth:600, mb: 2, display: 'flex' }}>
+      <Box sx={{ maxWidth: 600, mb: 1, display: 'flex' }}>
         <Autocomplete
           size="small"
           disablePortal
@@ -87,59 +83,42 @@ export default function VacancyCandidates() {
         />
       </Box>
 
-      <Box sx={{ mb: 3, display: 'flex' }}>
+      {/* кнопка скачать резюме */}
+      <Button sx={{ width: 260, mb:2, }} variant="outlined">Скачать резюме</Button>
+
+      {/* редактировать кандидата */}
+      <Button sx={{ ml: 1, mb:2, width: 260 }} variant="outlined">Редактировать кандидата</Button>
+
+      <Box sx={{ mb: 3 }}>
 
         {/* дата добавления в базу */}
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DemoContainer components={['DateField', 'DateField']}>
-            <DateField
-              size="small"
-              sx={{ width: 260 }}
-              label="Добавлен"
-              value={value}
-              onChange={(newValue) => setValue(newValue)}
-              format="DD-MM-YYYY / HH:mm"
-            />
-          </DemoContainer>
-        </LocalizationProvider>
+        <Box sx={{ display: 'flex' }}>
+          <Typography variant="body2" Wrap textAlign="left">Добавлен в базу: 17.06.2023</Typography>
+        </Box>
 
         {/* в новом статусе */}
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DemoContainer components={['DateField', 'DateField']}>
-            <DateField
-              size="small"
-              sx={{ width: 260, ml: 1, mr: -1 }}
-              label="В новом статусе c"
-              value={value}
-              onChange={(newValue) => setValue(newValue)}
-              format="DD-MM-YYYY / HH:mm"
-            />
+        <Box sx={{ mb: 2 }}>
+          <Typography variant="body2" Wrap textAlign="left">В новом статусе: 24 ч</Typography>
+        </Box>
 
-            {/* кнопка скачать резюме */}
-            <Button sx={{ width: 260 }} variant="outlined">Скачать резюме</Button>
-
-            {/* добавить кнопку редактировать кандидата */}
-          </DemoContainer>
-          
-        </LocalizationProvider>  
       </Box>
 
       <Box sx={{ display: 'flex' }}>
-        <Typography variant="subtitle2" Wrap textAlign="left">Источник:</Typography>
+        <Typography variant="body2" Wrap textAlign="left">Источник:</Typography>
       </Box>
 
-        {/* источник */}
+      {/* источник */}
       <Box sx={{ mb: 3, display: 'flex' }}>
         <a style={{ textDecoration: 'none', color: 'blue' }} href="https://spb.hh.ru/resume/5ad505b4ff04fba68e0039ed1f5656354f3853?customDomain=1">
-          <Typography variant="subtitle2" Wrap textAlign="left">https://spb.hh.ru/resume/5ad505b4ff04fba68e0039ed1f5656354f3853?customDomain=1</Typography>
+          <Typography variant="body2" Wrap textAlign="left">https://spb.hh.ru/resume/5ad505b4ff04fba68e0039ed1f5656354f3853?customDomain=1</Typography>
         </a>
       </Box>
 
       <Divider sx={{ mb: 3 }} />
 
       {/* о кандидате */}
-      <Typography variant="h6" gutterBottom >Крушинин Алексей</Typography>
-      <Typography variant="subtitle1" color="gray" gutterBottom >Angular разработчик</Typography>
+      <Typography variant="body1" gutterBottom ><b>Крушинин Алексей</b></Typography>
+      <Typography variant="body2" color="gray" gutterBottom >Angular разработчик</Typography>
 
       {/* Проживает */}
       <Box sx={{ mt: 2, mb: 0.5, display: 'flex' }}>
@@ -164,6 +143,7 @@ export default function VacancyCandidates() {
         <Typography sx={{ mr: 1 }} variant="body2">WhatsApp:</Typography>
         <Typography variant="body2" color="gray">+79218743998</Typography>
       </Box>
+
       <Box sx={{ mb: 3, mb: 0.5, display: 'flex' }}>
         <Typography sx={{ mr: 1 }} variant="body2">Email:</Typography>
         <Typography variant="body2" color="gray">v9218743998@yandex.ru</Typography>
@@ -172,18 +152,19 @@ export default function VacancyCandidates() {
       {/* Прочие ссылки */}
       <Box sx={{ display: 'flex' }}>
         <a style={{ textDecoration: 'none', color: 'blue' }} href="https://career.habr.com/viktoriia_gorkina">
-          <Typography variant="subtitle2" Wrap textAlign="left">https://career.habr.com/viktoriia_gorkina</Typography>
+          <Typography variant="body2" Wrap textAlign="left">https://career.habr.com/viktoriia_gorkina</Typography>
         </a>
       </Box>
+
       <Box sx={{ mb: 2, display: 'flex' }}>
         <a style={{ textDecoration: 'none', color: 'blue' }} href="https://github.com/ViktoriaElm">
-          <Typography variant="subtitle2" Wrap textAlign="left">https://github.com/ViktoriaElm</Typography>
+          <Typography variant="body2" Wrap textAlign="left">https://github.com/ViktoriaElm</Typography>
         </a>
       </Box>
 
       {/* Резюме описание */}
       <Box sx={{ mb: 9 }}>
-        <Typography sx={{ mr: 1 }} variant="subtitle1">
+        <Typography sx={{ mr: 1 }} variant="body2">
           <b>Программмист с++/c#/python/js/angular fullstack</b>
         </Typography>
         <Typography sx={{ mt: 1, mr: 1 }} variant="subtitle2">
@@ -225,44 +206,44 @@ export default function VacancyCandidates() {
         <Typography sx={{ mr: 1 }} variant="body2">
           Вошел в сферу программирования с фриланса: начинал с простых сайтов сверстаных на html, никогда не сидел на месте и не довольствовался достигнутым, старался изучать новые технологии и осваивать новые языки программирования. Работая во фрилансе я хорошо освоил js, php, реляционные БД, такие как postgres и mysql, научился строить сложные запросы. Когда понял что достиг потолка в самостоятельном обучении и дальше двигаться можно только с чейто помощью решил поступить учиться по профильной специальности в ВУЗ, параллельно с обучением нашел работу в большой международной компании mera.ru ( поглощена orioninc.com на данный момент). Фирма занималась аутсорсом и мне посчастливилось работать на крупную международную организацию занимающуюся ip-телефонией с головным офисом в Канаде avaya.com. В данной фирме я полностью погрузился в боевые задачи, начинал с багфикса.
           Нахожусь в активном поиске новой работы, рассматриваю варианты как удаленной работы так и в офисе.
-          </Typography>
+        </Typography>
         <Typography sx={{ mt: 2, mr: 1 }} variant="body2">
           <b>Образование:</b>
-          </Typography>
+        </Typography>
         <Typography sx={{ mr: 1 }} variant="body2">
           Казанский национальный исследовательский технический университет им. А.Н. Туполева
-          </Typography>
+        </Typography>
         <Typography sx={{ mr: 1 }} variant="body2">
           Казань, 2020
-          </Typography>
-        <Typography sx={{ mb:2, mr: 1 }} variant="body2">
+        </Typography>
+        <Typography sx={{ mb: 2, mr: 1 }} variant="body2">
           ИКТИЗИ, Программная инженерия
-          </Typography>
+        </Typography>
         <Typography sx={{ mr: 1 }} variant="body2">
           Поволжский государственный технологический университет
-          </Typography>
+        </Typography>
         <Typography sx={{ mr: 1 }} variant="body2"> Йошкар-Ола, 2008
         </Typography>
         <Typography sx={{ mr: 1 }} variant="body2">
           механико машиностроительный, машины и механизмы (ММ)
-          </Typography>
-        <Typography sx={{ mt:2,  mr: 1 }} variant="body2">
+        </Typography>
+        <Typography sx={{ mt: 2, mr: 1 }} variant="body2">
           <b>Знание языков:</b>
-          </Typography>
+        </Typography>
         <Typography sx={{ mr: 1 }} variant="body2">
           Русский - Родной
-          </Typography>
+        </Typography>
         <Typography sx={{ mr: 1 }} variant="body2">
           Английский - B1 — Средний
-          </Typography>
-        <Typography sx={{ mt:2, mr: 1 }} variant="body2">
+        </Typography>
+        <Typography sx={{ mt: 2, mr: 1 }} variant="body2">
           <b>Гражданство:</b> Россия
-          </Typography>
+        </Typography>
         <Typography sx={{ mr: 1 }} variant="body2">
           <b>Разрешение на работу:</b> Россия
-          </Typography>
+        </Typography>
         <Typography sx={{ mr: 1 }} variant="body2">
-         <b> Желаемое время в пути до работы:</b> Не более часа</Typography>
+          <b> Желаемое время в пути до работы:</b> Не более часа</Typography>
       </Box>
 
     </Box>

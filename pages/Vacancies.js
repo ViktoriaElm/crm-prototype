@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
+import Link from "next/link";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -72,26 +73,50 @@ export default function Vacancies() {
 
               <StyledTableCell sx={{ width: 110, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
 
-              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} component="th" scope="row">{row.nameVacancy}</StyledTableCell>
-
-              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">{row.quantityCandidates}</StyledTableCell>
-
-              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">{row.newCandidates}</StyledTableCell>
-
-              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">{row.salaryVacancy}</StyledTableCell>
-
-              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">{row.typeOfWork}</StyledTableCell>
-
-              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">
-                <Typography variant="inherit" color='darkgray'>
-                  {row.stackVacancy}
-                </Typography>
+              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} component="th" scope="row">
+                <Link style={{ textDecoration: 'none', color: 'dimgray' }} href="/DiscrVacancy">
+                  {row.nameVacancy}
+                </Link>
               </StyledTableCell>
 
               <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">
-                <Typography variant="inherit" color='darkgray'>
-                  {row.commentsVacancy}
-                </Typography>
+                <Link style={{ textDecoration: 'none', color: 'dimgray' }} href="/DiscrVacancy">
+                  {row.quantityCandidates}
+                </Link>
+              </StyledTableCell>
+
+              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">
+                <Link style={{ textDecoration: 'none', color: 'dimgray' }} href="/DiscrVacancy">
+                  {row.newCandidates}
+                </Link>
+              </StyledTableCell>
+
+              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">
+                <Link style={{ textDecoration: 'none', color: 'dimgray' }} href="/DiscrVacancy">
+                  {row.salaryVacancy}
+                </Link>
+              </StyledTableCell>
+
+              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">
+                <Link style={{ textDecoration: 'none', color: 'dimgray' }} href="/DiscrVacancy">
+                  {row.typeOfWork}
+                </Link>
+              </StyledTableCell>
+
+              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">
+                <Link style={{ textDecoration: 'none', color: 'dimgray' }} href="/DiscrVacancy">
+                  <Typography variant="inherit" color='darkgray'>
+                    {row.stackVacancy}
+                  </Typography>
+                </Link>
+              </StyledTableCell>
+
+              <StyledTableCell sx={{ border: 1, borderColor: 'grey.200' }} align="left">
+                <Link style={{ textDecoration: 'none', color: 'dimgray' }} href="/DiscrVacancy">
+                  <Typography variant="inherit" color='darkgray'>
+                    {row.commentsVacancy}
+                  </Typography>
+                </Link>
               </StyledTableCell>
 
             </StyledTableRow>

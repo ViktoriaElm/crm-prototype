@@ -15,9 +15,11 @@ import InputBase from '@mui/material/InputBase';
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.1),
+  // border: 0,
+  // инпут поиск
+  backgroundColor: alpha(theme.palette.common.white, 0.2),
   '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: alpha(theme.palette.common.white, 0.2),
   },
   marginLeft: 0,
   width: '100%',
@@ -55,7 +57,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const drawerWidth = 120;
 
-export default function ClippedDrawer() {
+export default function AppMenu() {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -65,9 +67,9 @@ export default function ClippedDrawer() {
             IT-recruitment
           </Typography>
           <Box sx={{ display: 'flex', ml: 10 }}>
-            <Button sx={{ color: 'white', border: 1 }} variant="outlined">Добавить кандидата</Button>
-            <Button sx={{ color: 'white', border: 1, ml: 3, mr: 2 }} variant="outlined">Добавить вакансию</Button>
-            <Search sx={{ color: 'white', display: 'block', border: 1 }}>
+            <Button sx={{ color: 'white', border: 0 }} variant="text">Добавить кандидата</Button>
+            <Button sx={{ color: 'white', border: 0, ml: 3, mr: 3 }} variant="text">Добавить вакансию</Button>
+            <Search sx={{ color: 'white', display: 'block', border: 0 }}>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
@@ -81,7 +83,6 @@ export default function ClippedDrawer() {
         </Toolbar>
       </AppBar>
       <Drawer
-
         variant="permanent"
         sx={{
           width: drawerWidth,
@@ -93,39 +94,39 @@ export default function ClippedDrawer() {
         <Box sx={{ p: 0.5, overflow: 'auto' }}>
 
           <ListItem sx={{ mt: 1, color: 'white', display: 'block' }} disablePadding>
-            <Link style={{ textDecoration: 'none', color: 'gray' }} href="/">
-              <Button sx={{ width: 110, color: 'white', border: 1, borderColor: 'grey.400', pt: 2, pb: 2 }} variant="contained">База</Button>
+            <Link style={{ textDecoration: 'none', color: 'dimgray' }} href="/">
+              <Typography sx={{ pt: 2, pl: 3 }} variant="subtitle2" Wrap textAlign="left">База</Typography>
             </Link>
           </ListItem>
 
           <ListItem sx={{ mt: 1, color: 'white', display: 'block' }} disablePadding>
-            <Link style={{ textDecoration: 'none', color: 'gray' }} href="/Vacancies">
-              <Button sx={{ width: 110, color: 'white', border: 1, borderColor: 'grey.400', pt: 2, pb: 2 }} variant="contained">Вакансии</Button>
+            <Link style={{ textDecoration: 'none', color: 'dimgray' }} href="/Vacancies">
+              <Typography sx={{ pt: 2, pl: 3 }} variant="subtitle2" Wrap textAlign="left">Вакансии</Typography>
             </Link>
           </ListItem>
 
           <ListItem sx={{ mt: 1, color: 'white', display: 'block' }} disablePadding>
-            <Link style={{ textDecoration: 'none', color: 'gray' }} href="/Reports">
-              <Button sx={{ width: 110, color: 'white', border: 1, borderColor: 'grey.400', pt: 2, pb: 2 }} variant="contained">Отчеты</Button>
+            <Link style={{ textDecoration: 'none', color: 'dimgray' }} href="/Reports">
+              <Typography sx={{ pt: 2, pl: 3 }} variant="subtitle2" Wrap textAlign="left">Отчеты</Typography>
             </Link>
           </ListItem>
 
           <ListItem sx={{ mt: 1, color: 'white', display: 'block' }} disablePadding>
-            <Link style={{ textDecoration: 'none', color: 'gray' }} href="/Templates">
-              <Button sx={{ width: 110, color: 'white', border: 1, borderColor: 'grey.400', pt: 2, pb: 2 }} variant="contained">Шаблоны</Button>
+            <Link style={{ textDecoration: 'none', color: 'dimgray' }} href="/Templates">
+              <Typography sx={{ pt: 2, pl: 3 }} variant="subtitle2" Wrap textAlign="left">Шаблоны</Typography>
             </Link>
           </ListItem>
 
           <List>
             <ListItem sx={{ mt: 2, color: 'white', display: 'block' }} disablePadding>
-              <Link style={{ textDecoration: 'none', color: 'silver' }} href="/Admin">
-                <Button sx={{ width: 110, color: 'lightgray', border: 0 }} variant="outlined">Админ</Button>
+              <Link style={{ textDecoration: 'none' }} href="/Admin">
+                <Typography sx={{ pt: 2, pl: 3, color: 'silver' }} variant="subtitle2" Wrap textAlign="left">Админ</Typography>
               </Link>
             </ListItem>
 
             <ListItem sx={{ color: 'white', display: 'block' }} disablePadding>
               <Link style={{ textDecoration: 'none', color: 'silver' }} href="/SignOut">
-                <Button sx={{ mt: 1, width: 110, color: 'lightgray', border: 0 }} variant="outlined">Выход</Button>
+                <Typography sx={{ pt: 2, pl: 3 }} variant="subtitle2" Wrap textAlign="left">Выход</Typography>
               </Link>
             </ListItem>
           </List>

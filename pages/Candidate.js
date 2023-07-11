@@ -4,9 +4,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import CVCandidates from '../components/CVCandidates'
 
 const drawerWidth = 220;
@@ -27,13 +24,14 @@ export default function Candidate() {
         <Toolbar />
         <Box sx={{ overflow: 'auto' }}>
           <List>
-            {['Крушинин Алексей', 'Сазонов Иван Витальевич', 'Петров Григорий', 'Иванов Иван', 'Жуков Артем', 'Киселева Надежда', 'Пушкарев Андрей', 'Булыгин Васлий Викторович'].map((text) => (
-              <ListItem key={text} disablePadding>
-                <ListItemButton>
-                  <Typography variant="body2" textAlign="left"><ListItemText />{text}</Typography>
-                </ListItemButton>
-              </ListItem>
-            ))}
+              <Typography sx={{ pt: 2, pl: 2 }} variant="subtitle2" Wrap textAlign="left">Крушинин Алексей</Typography>
+              <Typography sx={{ pt: 2, pl: 2 }} variant="subtitle2" Wrap textAlign="left">Сазонов Иван Витальевич</Typography>
+              <Typography sx={{ pt: 2, pl: 2 }} variant="subtitle2" Wrap textAlign="left">Петров Григорий</Typography>
+              <Typography sx={{ pt: 2, pl: 2 }} variant="subtitle2" Wrap textAlign="left">Иванов Иван</Typography>
+              <Typography sx={{ pt: 2, pl: 2 }} variant="subtitle2" Wrap textAlign="left">Жуков Артем</Typography>
+              <Typography sx={{ pt: 2, pl: 2 }} variant="subtitle2" Wrap textAlign="left">Киселева Надежда</Typography>
+              <Typography sx={{ pt: 2, pl: 2 }} variant="subtitle2" Wrap textAlign="left">Пушкарев Андрей</Typography>
+              <Typography sx={{ pt: 2, pl: 2 }} variant="subtitle2" Wrap textAlign="left">Булыгин Васлий Викторович</Typography>
           </List>
         </Box>
       </Drawer>

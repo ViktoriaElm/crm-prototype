@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    color: alpha(theme.palette.common.black, 0.7),
+    color: theme.palette.text.secondary,
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 12,
@@ -20,7 +20,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:nth-of-type(odd)': {
-    backgroundColor: theme.palette.common.white,
+    backgroundColor: theme.palette.action.hover,
   },
 }));
 
@@ -86,7 +86,7 @@ export default function AllCandidates() {
 
           {rows.map((row) => (
 
-            <StyledTableRow key={row.name}>
+            <StyledTableRow key={row.id}>
 
               <StyledTableCell sx={{ width: 119, border: 1, borderColor: 'grey.300' }} align="left"><b></b></StyledTableCell>
 
